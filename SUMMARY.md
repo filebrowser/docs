@@ -7,6 +7,7 @@
 * [Get Started](usage/get-started.md)
 * [Command Line Interface](usage/command-line-interface.md)
 * [Docker](usage/docker.md)
+* [Caddy](usage/caddy.md)
 
 ## Configuration
 
@@ -16,10 +17,11 @@
 
 ## Contributing
 
-* [Code of Conduct](contributing/code-of-conduct.md)
 * [Project Structure](contributing/project-structure.md)
 * [Authentication Provider](contributing/authentication-provider.md)
 * [Translations](contributing/translations.md)
 * [CI and Releases](contributing/ci-and-releases.md)
 * [Builds](contributing/builds.md)
+* [Development](contributing/development.md)
+* [Code of Conduct](contributing/code-of-conduct.md)
 

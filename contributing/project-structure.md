@@ -12,7 +12,7 @@ This modular approach is meant to make contributing easier for users willing to 
 
 This structure is also valuable for third parties to develop alternative implementations of any of the pieces. E.g. a different frontend can be written using Angular, but keeping the same backend. Equally, a different backend can be written using Python or Ruby, but keeping the same frontend.
 
-
+Furthermore, File Browser can also be used as a middleware for another app. Indeed, it is available as a plugin for [Caddy](https://caddyserver.com/). For more information about this plugin, please see the repository [filebrowser/caddy](https://github.com/filebrowser/caddy).
 
 
 
