@@ -21,7 +21,7 @@
 * [Authentication Provider](contributing/authentication-provider.md)
 * [Translations](contributing/translations.md)
 * [CI and Releases](contributing/ci-and-releases.md)
-* [Builds](contributing/builds.md)
+* [Build](contributing/builds.md)
 * [Development](contributing/development.md)
 * [Code of Conduct](contributing/code-of-conduct.md)
 

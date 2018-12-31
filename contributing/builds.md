@@ -2,7 +2,7 @@
 description: '[NEEDS CLEANUP]'
 ---
 
-# Builds
+# Build
 
 ## Get the source code
 
@@ -65,7 +65,7 @@ cd ../cli
 go get -v ./...
 ```
 
-Last, the backend can be either run or built from subdir `cli` as usual:
+Last, the backend can be either run or built from sub directory `cli` as usual:
 
 ```bash
 cd ../cli
@@ -81,7 +81,9 @@ cd ..
 cp cli/filebrowser ./
 ```
 
-> Note: `CGO_ENABLED=0` is used so that a static binary is built. See [golang.org/cmd/cgo/](https://golang.org/cmd/cgo/).
+{% hint style="info" %}
+`CGO_ENABLED=0` is used so that a static binary is built. See [golang.org/cmd/cgo](https://golang.org/cmd/cgo/).
+{% endhint %}
 
 ## Build a Docker image
 
@@ -95,15 +97,14 @@ VOLUME /srv
 EXPOSE 80
 
 COPY filebrowser /filebrowser
-COPY Docker.json /config.json
 
-ENTRYPOINT ["/filebrowser", "--config", "/config.json"]
+ENTRYPOINT ["/filebrowser", "--port", "80"]
 ```
 
 So, put the built binary and a `config.json` in the same dir as the [dockerfile](https://docs.docker.com/engine/reference/builder/) shown above and build it:
 
 ```bash
-docker build -t filebrowser/filebrowser .
+docker build -t filebrowser/filebrowser 
 ```
 
 You can then try it:
