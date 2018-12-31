@@ -4,9 +4,9 @@
 
 ## Usage
 
-* [Get Started](usage-1/get-started.md)
-* [Command Line Interface](usage-1/command-line-interface.md)
-* [Docker](usage-1/docker.md)
+* [Get Started](usage/get-started.md)
+* [Command Line Interface](usage/command-line-interface.md)
+* [Docker](usage/docker.md)
 
 ## Configuration
 
