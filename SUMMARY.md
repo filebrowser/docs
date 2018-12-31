@@ -1,12 +1,18 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [Installation](installation.md)
+
+## Usage
+
+* [Get Started](usage-1/get-started.md)
+* [Command Line Interface](usage-1/command-line-interface.md)
+* [Docker](usage-1/docker.md)
 
 ## Configuration
 
 * [Custom Branding](configuration/custom-branding.md)
 * [Authentication Method](configuration/authentication-method.md)
+* [Command Runner](configuration/command-runner.md)
 
 ## Contributing
 
