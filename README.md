@@ -1,40 +1,31 @@
 # Welcome
 
-### Quick Start
-
-This is the fastest way for beginners to start using File Browser. Although, there [other ways](./installation) to install it.
-
-* [Download File Browser](https://github.com/filebrowser/filebrowser/releases) and put it on your PATH.
-* Run `filebrowser -s /path/to/your/files`.
-
-Done! It will tell you the address in which File Browser is running. You'll only need to open it and use the following credentials \(you must change them!\):
-
-* Username: `admin`
-* Password: `admin`
-
-### One Step Script
-
-If you're running linux or macOS, you can use a very special script - made by [Kyle Frost](https://www.kylefrost.me/) - to download the latest version of File Browser and install it on `/usr/local/bin`.
+The quickest way for beginners to start using File Browser is by opening your terminal and executing the following commands:
 
 {% tabs %}
-{% tab title="curl" %}
+{% tab title="Unix" %}
 ```bash
-curl -fsSL https://filebrowser.github.io/get.sh | bash
+curl -fsSL https://filebrowser.xyz/get.sh | bash
+filebrowser -s /path/to/your/files
 ```
 {% endtab %}
 
-{% tab title="wget" %}
+{% tab title="Windows" %}
 ```bash
-wget -qO- https://filebrowser.github.io/get.sh | bash
+iwr -useb https://filebrowser.xyz/get.ps1 | iex
+filebrowser -s /path/to/your/files
 ```
 {% endtab %}
 {% endtabs %}
 
-If you're on Windows, you can use PowerShell to install File Browser too. You should run the following command as administrator since it needs permissions to add the executable to the PATH.
+Done! It will bootstrap a database in which all the configurations and users are stored. Now, you can see on your command line the address in which your instance is running. You just need to go to that URL and use the following credentials:
 
-```bash
-iwr -useb https://filebrowser.github.io/get.ps1 | iex
-```
+* Username: `admin`
+* Password: `admin`
 
+{% hint style="danger" %}
+You must change the password and, if you can, the username for the best security possible.
+{% endhint %}
 
+Although this is the fastest way to bootstrap an instance, we recommend you to read our [Get Started guide]() to know more about how File Browser works and other commands you can use.
 
