@@ -17,7 +17,7 @@ We use semantic versioning. For more info check [semver.org](https://semver.org)
    5. Revert the version to `untracked` and commit again.
 3. When the tag is pushed, Travis will detect it and execute the following [procedures](https://github.com/filebrowser/filebrowser/blob/master/.travis.yml):
    1. Run through the linters to check if the code is alright.
-   2. Build the frontend and the backend, generating `rice-box.go`\`.
+   2. Build the frontend and the backend, generating `rice-box.go`.
       * If the commit **is not** tagged, we will push the latest `filebrowser/filebrowser` docker image to [hub.docker.com/r/filebrowser/filebrowser](https://hub.docker.com/r/filebrowser/filebrowser/).
    3. If the commit **is** tagged, then:
       1. Build the release artifacts for all supported platforms and a new docker image \(see [`.goreleaser.yml`](https://github.com/filebrowser/filebrowser/blob/master/.goreleaser.yml) for more information\).
