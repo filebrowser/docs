@@ -2,8 +2,6 @@
 
 If you're interested in contributing to this project, this is the best place to start. Before contributing to this project, please take a bit of time to read our [Code of Conduct](code-of-conduct.md). Also, note that this project is open-source and licensed under [Apache License 2.0](https://github.com/filebrowser/filebrowser/blob/master/LICENSE).
 
-
-
 ## Project Structure
 
 This project is composed of two main repositories, both hosted at GitHub:

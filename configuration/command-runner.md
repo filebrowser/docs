@@ -1,3 +1,7 @@
+---
+description: Execute certain commands in specific events.
+---
+
 # Command Runner
 
 The command runner is a feature that enables you to execute any shell command you want before or after a certain event. Right now, these are the events:

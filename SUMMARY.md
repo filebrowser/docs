@@ -2,10 +2,8 @@
 
 * [Welcome](README.md)
 * [Features](features.md)
-* [Usage](usage/README.md)
-  * [Docker](usage/docker.md)
-  * [Caddy](usage/caddy.md)
-  * [Command Line Interface](usage/command-line-interface.md)
+* [Installation](installation.md)
+* [Usage](usage.md)
 * [Configuration](configuration/README.md)
   * [Custom Branding](configuration/custom-branding.md)
   * [Authentication Method](configuration/authentication-method.md)

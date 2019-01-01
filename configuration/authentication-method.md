@@ -1,3 +1,7 @@
+---
+description: Change the authentication method for something that works better for you.
+---
+
 # Authentication Method
 
 Right now, there are three possible authentication methods. Each one of them has its own capabilities and specification. If you are interested in contributing with one more authentication method, please [check the guidelines](../contributing/authentication-provider.md).

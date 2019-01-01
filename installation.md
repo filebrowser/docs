@@ -1,6 +1,6 @@
-# Usage
+# Installation
 
-File Browser is a single binary and can be used as a standalone executable. Although, some might prefer to use it with [Docker](docker.md) or [Caddy](caddy.md), which is a fantastic web server that enables HTTPS by default.
+File Browser is a single binary and can be used as a standalone executable. Although, some might prefer to use it with [Docker]() or [Caddy](), which is a fantastic web server that enables HTTPS by default.
 
 ## Installation
 

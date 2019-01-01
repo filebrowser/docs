@@ -27,5 +27,5 @@ Done! It will bootstrap a database in which all the configurations and users are
 You must change the password and, if you can, the username for the best security possible.
 {% endhint %}
 
-Although this is the fastest way to bootstrap an instance, we recommend you to read our [Get Started guide]() to know more about how File Browser works and other commands you can use.
+Although this is the fastest way to bootstrap an instance, we recommend you to read our [installation](installation.md) guide to know more about how File Browser works and other commands you can use.
 
