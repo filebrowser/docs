@@ -6,15 +6,19 @@ description: Initialize a new database
 
 ## Synopsis
 
-Initialize a new database to use with File Browser. All of this options can be changed in the future with the command "filebrowser config set". The user related flags apply to the defaults when creating new users and you don't override the options.
+Initialize a new database to use with File Browser. All of
+this options can be changed in the future with the command
+"filebrowser config set". The user related flags apply
+to the defaults when creating new users and you don't
+override the options.
 
-```text
+```
 filebrowser init [flags]
 ```
 
 ## Options
 
-```text
+```
   -a, --address string             default address to listen to (default "127.0.0.1")
       --auth.header string         HTTP header for auth.method=proxy
       --auth.method string         authentication type (default "json")
@@ -51,7 +55,6 @@ filebrowser init [flags]
 
 ### Inherited
 
-```text
+```
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

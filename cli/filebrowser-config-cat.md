@@ -1,24 +1,25 @@
-# filebrowser config cat
+---
+description: Prints the configuration
+---
 
-Prints the configuration
+# filebrowser config cat
 
 ## Synopsis
 
 Prints the configuration.
 
-```text
+```
 filebrowser config cat [flags]
 ```
 
 ## Options
 
-```text
+```
   -h, --help   help for cat
 ```
 
-## Options inherited from parent commands
+### Inherited
 
-```text
+```
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

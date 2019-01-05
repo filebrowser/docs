@@ -1,24 +1,25 @@
-# filebrowser version
+---
+description: Print the version number
+---
 
-Print the version number
+# filebrowser version
 
 ## Synopsis
 
 Print the version number
 
-```text
+```
 filebrowser version [flags]
 ```
 
 ## Options
 
-```text
+```
   -h, --help   help for version
 ```
 
-## Options inherited from parent commands
+### Inherited
 
-```text
+```
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

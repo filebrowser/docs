@@ -1,25 +1,26 @@
+---
+description: List all commands for each event
+---
+
 # filebrowser cmds ls
 
-List all commands for each even
+## Synopsis
 
-## filebrowser cmds ls
+List all commands for each event.
 
-```text
-  -d, --database string   path to the database (default "./filebrowser.db")
+```
+filebrowser cmds ls [flags]
 ```
 
-{% tabs %}
-{% tab title="Options" %}
-```text
- -e, --event string   event name, without 'before' or 'after'
+## Options
+
+```
+  -e, --event string   event name, without 'before' or 'after'
   -h, --help           help for ls
 ```
 
-From parent commands:
+### Inherited
 
-```text
+```
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-{% endtab %}
-{% endtabs %}
-

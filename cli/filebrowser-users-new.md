@@ -1,18 +1,20 @@
-# filebrowser users new
+---
+description: Create a new user
+---
 
-Create a new user
+# filebrowser users new
 
 ## Synopsis
 
 Create a new user and add it to the database.
 
-```text
+```
 filebrowser users new [flags]
 ```
 
 ## Options
 
-```text
+```
       --commands strings    a list of the commands a user can execute
   -h, --help                help for new
       --locale string       locale for users (default "en")
@@ -33,9 +35,8 @@ filebrowser users new [flags]
       --viewMode string     view mode for users (default "list")
 ```
 
-## Options inherited from parent commands
+### Inherited
 
-```text
+```
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

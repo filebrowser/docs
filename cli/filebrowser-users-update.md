@@ -1,18 +1,21 @@
-# filebrowser users update
+---
+description: Updates an existing user
+---
 
-Updates an existing user
+# filebrowser users update
 
 ## Synopsis
 
-Updates an existing user. Set the flags for the options you want to change.
+Updates an existing user. Set the flags for the
+options you want to change.
 
-```text
+```
 filebrowser users update [flags]
 ```
 
 ## Options
 
-```text
+```
       --commands strings    a list of the commands a user can execute
   -h, --help                help for update
   -i, --id uint             id of the user
@@ -34,9 +37,8 @@ filebrowser users update [flags]
       --viewMode string     view mode for users (default "list")
 ```
 
-## Options inherited from parent commands
+### Inherited
 
-```text
+```
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

@@ -1,24 +1,25 @@
-# filebrowser config
+---
+description: Configuration management utility
+---
 
-Configuration management utility
+# filebrowser config
 
 ## Synopsis
 
 Configuration management utility.
 
-```text
+```
 filebrowser config [flags]
 ```
 
 ## Options
 
-```text
+```
   -h, --help   help for config
 ```
 
-## Options inherited from parent commands
+### Inherited
 
-```text
+```
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-
