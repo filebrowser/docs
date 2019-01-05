@@ -1,5 +1,9 @@
 # Welcome
 
+{% hint style="info" %}
+Are you looking for how to upgrade from 1.x? [We've got you covered](upgrade-from-1.x.md).
+{% endhint %}
+
 The quickest way for beginners to start using File Browser is by opening your terminal and executing the following commands:
 
 {% tabs %}

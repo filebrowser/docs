@@ -4,6 +4,7 @@
 * [Features](features.md)
 * [Installation](installation.md)
 * [Usage](usage.md)
+* [Upgrade from 1.x](upgrade-from-1.x.md)
 * [Configuration](configuration/README.md)
   * [Custom Branding](configuration/custom-branding.md)
   * [Authentication Method](configuration/authentication-method.md)
