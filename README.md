@@ -4,32 +4,13 @@
 Are you looking for how to upgrade from 1.x? [We've got you covered](upgrade-from-1.x.md).
 {% endhint %}
 
-The quickest way for beginners to start using File Browser is by opening your terminal and executing the following commands:
+Welcome to File Browser's official documentation. Here you can find probably anything you need to know about the configuration of your instance, the usage and the contributing guidelines. Are you ready to get into this boat? 🚢
 
-{% tabs %}
-{% tab title="Unix" %}
-```bash
-curl -fsSL https://filebrowser.xyz/get.sh | bash
-filebrowser -s /path/to/your/files
-```
-{% endtab %}
+{% page-ref page="installation.md" %}
 
-{% tab title="Windows" %}
-```bash
-iwr -useb https://filebrowser.xyz/get.ps1 | iex
-filebrowser -s /path/to/your/files
-```
-{% endtab %}
-{% endtabs %}
+{% page-ref page="cli/" %}
 
-Done! It will bootstrap a database in which all the configurations and users are stored. Now, you can see on your command line the address in which your instance is running. You just need to go to that URL and use the following credentials:
+{% page-ref page="configuration/" %}
 
-* Username: `admin`
-* Password: `admin`
-
-{% hint style="danger" %}
-You must change the password and, if you can, the username for the best security possible.
-{% endhint %}
-
-Although this is the fastest way to bootstrap an instance, we recommend you to read our [installation](installation.md) guide to know more about how File Browser works and other commands you can use.
+{% page-ref page="contributing/" %}
 
