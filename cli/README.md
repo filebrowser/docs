@@ -8,4 +8,5 @@ The command line interface is very extensive and you can use it to modify settin
 * `import` to import from a 1.x configuration.
 * `init` is an alias to `config init`.
 
-All commands have the `--help` \(shorthand `-h`\) flag available and we invite you to explore all the commands for your own use.
+Under this section you can find the usage of each command. This docs were automatically generated from the source code and have the same information as the `--help` \(shorthand `-h`\) flag.
+
