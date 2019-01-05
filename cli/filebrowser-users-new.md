@@ -8,13 +8,13 @@ description: Create a new user
 
 Create a new user and add it to the database.
 
-```
+```text
 filebrowser users new [flags]
 ```
 
 ## Options
 
-```
+```text
       --commands strings    a list of the commands a user can execute
   -h, --help                help for new
       --locale string       locale for users (default "en")
@@ -37,6 +37,7 @@ filebrowser users new [flags]
 
 ### Inherited
 
-```
+```text
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
+

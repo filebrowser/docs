@@ -6,16 +6,15 @@ description: Updates the configuration
 
 ## Synopsis
 
-Updates the configuration. Set the flags for the options
-you want to change.
+Updates the configuration. Set the flags for the options you want to change.
 
-```
+```text
 filebrowser config set [flags]
 ```
 
 ## Options
 
-```
+```text
   -a, --address string             default address to listen to (default "127.0.0.1")
       --auth.header string         HTTP header for auth.method=proxy
       --auth.method string         authentication type (default "json")
@@ -52,6 +51,7 @@ filebrowser config set [flags]
 
 ### Inherited
 
-```
+```text
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
+

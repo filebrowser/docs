@@ -6,16 +6,15 @@ description: Updates an existing user
 
 ## Synopsis
 
-Updates an existing user. Set the flags for the
-options you want to change.
+Updates an existing user. Set the flags for the options you want to change.
 
-```
+```text
 filebrowser users update [flags]
 ```
 
 ## Options
 
-```
+```text
       --commands strings    a list of the commands a user can execute
   -h, --help                help for update
   -i, --id uint             id of the user
@@ -39,6 +38,7 @@ filebrowser users update [flags]
 
 ### Inherited
 
-```
+```text
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
+
