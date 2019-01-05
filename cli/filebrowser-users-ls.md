@@ -1,24 +1,23 @@
-# filebrowser users ls
+## filebrowser users ls
 
 List all users.
 
-## Synopsis
+### Synopsis
 
 List all users.
 
-```text
+```
 filebrowser users ls [flags]
 ```
 
-## Options
+### Options
 
-```text
+```
   -h, --help   help for ls
 ```
 
-## Options inherited from parent commands
+### Options inherited from parent commands
 
-```text
+```
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

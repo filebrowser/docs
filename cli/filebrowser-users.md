@@ -1,24 +1,23 @@
-# filebrowser users
+## filebrowser users
 
 Users management utility
 
-## Synopsis
+### Synopsis
 
 Users management utility.
 
-```text
+```
 filebrowser users [flags]
 ```
 
-## Options
+### Options
 
-```text
+```
   -h, --help   help for users
 ```
 
-## Options inherited from parent commands
+### Options inherited from parent commands
 
-```text
+```
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

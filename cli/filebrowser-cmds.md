@@ -1,24 +1,23 @@
-# filebrowser cmds
+## filebrowser cmds
 
 Command runner management utility
 
-## Synopsis
+### Synopsis
 
 Command runner management utility.
 
-```text
+```
 filebrowser cmds [flags]
 ```
 
-## Options
+### Options
 
-```text
+```
   -h, --help   help for cmds
 ```
 
-## Options inherited from parent commands
+### Options inherited from parent commands
 
-```text
+```
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-
