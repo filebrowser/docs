@@ -3,7 +3,7 @@
 * [Welcome](README.md)
 * [Features](features.md)
 * [Installation](installation.md)
-* [Usage](usage.md)
+* [Command Line Interface](cli.md)
 * [Upgrade from 1.x](upgrade-from-1.x.md)
 * [Configuration](configuration/README.md)
   * [Custom Branding](configuration/custom-branding.md)

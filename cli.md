@@ -1,6 +1,4 @@
-# Usage
-
-## Command Line Interface
+# Command Line Interface
 
 The command line interface is very extensive and you can use it to modify settings, users or even have a generator of File Browser installations. The main sub commands available are:
 

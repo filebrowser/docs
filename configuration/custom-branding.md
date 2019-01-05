@@ -1,7 +1,3 @@
----
-description: Customize your File Browser installation giving it your touch.
----
-
 # Custom Branding
 
 You can now customize your File Browser installation by change its name to any other you want, by adding a global custom style sheet and by using your own logotype if you want. To address this, we have three configuration options that can be changed:

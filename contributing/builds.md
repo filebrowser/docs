@@ -1,7 +1,3 @@
----
-description: '[NEEDS CLEANUP]'
----
-
 # Build
 
 ## Get the source code
