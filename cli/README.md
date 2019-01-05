@@ -9,3 +9,4 @@ The command line interface is very extensive and you can use it to modify settin
 * `init` is an alias to `config init`.
 
 Under this section you can find the usage of each command. This docs were automatically generated from the source code and have the same information as the `--help` \(shorthand `-h`\) flag.
+
