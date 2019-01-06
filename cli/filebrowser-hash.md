@@ -1,22 +1,22 @@
 ---
-description: Users management utility
+description: Hashes a password
 ---
 
-# filebrowser users
+# filebrowser hash
 
 ## Synopsis
 
-Users management utility.
+Hashes a password using bcrypt algorithm.
 
 ```
-filebrowser users [flags]
+filebrowser hash <password> [flags]
 ```
 
 ## Options
 
 | Name | Shorthand | Usage |
 |------|-----------|-------|
-|help|h|help for users|
+|help|h|help for hash|
 
 ### Inherited
 

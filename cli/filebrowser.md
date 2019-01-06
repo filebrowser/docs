@@ -47,18 +47,18 @@ filebrowser [flags]
 
 ## Options
 
-```
-  -a, --address string    address to listen on (default "127.0.0.1")
-  -b, --baseurl string    base url
-  -t, --cert string       tls certificate
-  -c, --config string     config file path
-  -d, --database string   path to the database (default "./filebrowser.db")
-  -h, --help              help for filebrowser
-  -k, --key string        tls key
-  -l, --log string        log output (default "stdout")
-      --password string   password for the first user when using quick config (default "admin")
-  -p, --port int          port to listen on (default 8080)
-  -s, --scope string      scope to prepend to a user's scope when it is relative (default ".")
-      --username string   username for the first user when using quick config (default "admin")
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|address|a|address to listen on|
+|baseurl|b|base url|
+|cert|t|tls certificate|
+|config|c|config file path|
+|database|d|path to the database|
+|help|h|help for filebrowser|
+|key|k|tls key|
+|log|l|log output|
+|password||hashed password for the first user when using quick config (default "admin")|
+|port|p|port to listen on|
+|scope|s|scope to prepend to a user's scope when it is relative|
+|username||username for the first user when using quick config|
 

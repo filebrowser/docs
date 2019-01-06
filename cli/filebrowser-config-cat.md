@@ -14,13 +14,14 @@ filebrowser config cat [flags]
 
 ## Options
 
-```
-  -h, --help   help for cat
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|help|h|help for cat|
 
 ### Inherited
 
-```
-  -c, --config string     config file path
-  -d, --database string   path to the database (default "./filebrowser.db")
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|config|c|config file path|
+|database|d|path to the database|
+

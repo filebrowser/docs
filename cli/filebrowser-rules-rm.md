@@ -14,16 +14,17 @@ filebrowser rules rm <index> [index_end] [flags]
 
 ## Options
 
-```
-  -h, --help         help for rm
-      --index uint   index of rule to remove
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|help|h|help for rm|
+|index||index of rule to remove|
 
 ### Inherited
 
-```
-  -c, --config string     config file path
-  -d, --database string   path to the database (default "./filebrowser.db")
-  -i, --id uint           id of user to which the rules apply
-  -u, --username string   username of user to which the rules apply
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|config|c|config file path|
+|database|d|path to the database|
+|id|i|id of user to which the rules apply|
+|username|u|username of user to which the rules apply|
+

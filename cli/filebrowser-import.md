@@ -16,15 +16,16 @@ filebrowser import [flags]
 
 ## Options
 
-```
-  -h, --help                  help for import
-      --old.config string     
-      --old.database string   
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|help|h|help for import|
+|old.config|||
+|old.database|||
 
 ### Inherited
 
-```
-  -c, --config string     config file path
-  -d, --database string   path to the database (default "./filebrowser.db")
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|config|c|config file path|
+|database|d|path to the database|
+

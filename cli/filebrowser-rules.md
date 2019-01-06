@@ -18,15 +18,16 @@ filebrowser rules [flags]
 
 ## Options
 
-```
-  -h, --help              help for rules
-  -i, --id uint           id of user to which the rules apply
-  -u, --username string   username of user to which the rules apply
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|help|h|help for rules|
+|id|i|id of user to which the rules apply|
+|username|u|username of user to which the rules apply|
 
 ### Inherited
 
-```
-  -c, --config string     config file path
-  -d, --database string   path to the database (default "./filebrowser.db")
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|config|c|config file path|
+|database|d|path to the database|
+

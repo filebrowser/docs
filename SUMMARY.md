@@ -13,6 +13,7 @@
   * [filebrowser config](cli/filebrowser-config.md)
   * [filebrowser config cat](cli/filebrowser-config-cat.md)
   * [filebrowser config set](cli/filebrowser-config-set.md)
+  * [filebrowser hash](cli/filebrowser-hash.md)
   * [filebrowser import](cli/filebrowser-import.md)
   * [filebrowser init](cli/filebrowser-init.md)
   * [filebrowser rules](cli/filebrowser-rules.md)

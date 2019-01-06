@@ -14,13 +14,14 @@ filebrowser users rm <id|username> [flags]
 
 ## Options
 
-```
-  -h, --help   help for rm
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|help|h|help for rm|
 
 ### Inherited
 
-```
-  -c, --config string     config file path
-  -d, --database string   path to the database (default "./filebrowser.db")
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|config|c|config file path|
+|database|d|path to the database|
+

@@ -18,38 +18,39 @@ filebrowser init [flags]
 
 ## Options
 
-```
-      --auth.header string         HTTP header for auth.method=proxy
-      --auth.method string         authentication type (default "json")
-      --branding.disableExternal   disable external links such as GitHub links
-      --branding.files string      path to directory with images and custom styles
-      --branding.name string       replace 'File Browser' by this name
-      --commands strings           a list of the commands a user can execute
-  -h, --help                       help for init
-      --locale string              locale for users (default "en")
-      --lockPassword               lock password
-      --perm.admin                 admin perm for users
-      --perm.create                create perm for users (default true)
-      --perm.delete                delete perm for users (default true)
-      --perm.download              download perm for users (default true)
-      --perm.execute               execute perm for users (default true)
-      --perm.modify                modify perm for users (default true)
-      --perm.rename                rename perm for users (default true)
-      --perm.share                 share perm for users (default true)
-      --recaptcha.host string      use another host for ReCAPTCHA. recaptcha.net might be useful in China (default "https://www.google.com")
-      --recaptcha.key string       ReCaptcha site key
-      --recaptcha.secret string    ReCaptcha secret
-      --scope string               scope for users (default ".")
-      --shell string               shell command to which other commands should be appended
-  -s, --signup                     allow users to signup
-      --sorting.asc                sorting by ascending order
-      --sorting.by string          sorting mode (name, size or modified) (default "name")
-      --viewMode string            view mode for users (default "list")
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|auth.header||HTTP header for auth.method=proxy|
+|auth.method||authentication type|
+|branding.disableExternal||disable external links such as GitHub links|
+|branding.files||path to directory with images and custom styles|
+|branding.name||replace 'File Browser' by this name|
+|commands||a list of the commands a user can execute|
+|help|h|help for init|
+|locale||locale for users|
+|lockPassword||lock password|
+|perm.admin||admin perm for users|
+|perm.create||create perm for users|
+|perm.delete||delete perm for users|
+|perm.download||download perm for users|
+|perm.execute||execute perm for users|
+|perm.modify||modify perm for users|
+|perm.rename||rename perm for users|
+|perm.share||share perm for users|
+|recaptcha.host||use another host for ReCAPTCHA. recaptcha.net might be useful in China|
+|recaptcha.key||ReCaptcha site key|
+|recaptcha.secret||ReCaptcha secret|
+|scope||scope for users|
+|shell||shell command to which other commands should be appended|
+|signup|s|allow users to signup|
+|sorting.asc||sorting by ascending order|
+|sorting.by||sorting mode (name, size or modified)|
+|viewMode||view mode for users|
 
 ### Inherited
 
-```
-  -c, --config string     config file path
-  -d, --database string   path to the database (default "./filebrowser.db")
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|config|c|config file path|
+|database|d|path to the database|
+

@@ -14,13 +14,14 @@ filebrowser version [flags]
 
 ## Options
 
-```
-  -h, --help   help for version
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|help|h|help for version|
 
 ### Inherited
 
-```
-  -c, --config string     config file path
-  -d, --database string   path to the database (default "./filebrowser.db")
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|config|c|config file path|
+|database|d|path to the database|
+

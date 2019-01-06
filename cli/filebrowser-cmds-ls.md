@@ -14,14 +14,15 @@ filebrowser cmds ls [flags]
 
 ## Options
 
-```
-  -e, --event string   event name, without 'before' or 'after'
-  -h, --help           help for ls
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|event|e|event name, without 'before' or 'after'|
+|help|h|help for ls|
 
 ### Inherited
 
-```
-  -c, --config string     config file path
-  -d, --database string   path to the database (default "./filebrowser.db")
-```
+| Name | Shorthand | Usage |
+|------|-----------|-------|
+|config|c|config file path|
+|database|d|path to the database|
+
