@@ -8,19 +8,19 @@ description: Configuration management utility
 
 Configuration management utility.
 
-```text
+```
 filebrowser config [flags]
 ```
 
 ## Options
 
-```text
+```
   -h, --help   help for config
 ```
 
 ### Inherited
 
-```text
+```
+  -c, --config string     config file path
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

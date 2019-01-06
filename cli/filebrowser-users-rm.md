@@ -8,21 +8,19 @@ description: Delete a user by username or id
 
 Delete a user by username or id
 
-```text
-filebrowser users rm [flags]
+```
+filebrowser users rm <id|username> [flags]
 ```
 
 ## Options
 
-```text
-  -h, --help              help for rm
-  -i, --id uint           id to delete
-  -u, --username string   username to delete
+```
+  -h, --help   help for rm
 ```
 
 ### Inherited
 
-```text
+```
+  -c, --config string     config file path
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

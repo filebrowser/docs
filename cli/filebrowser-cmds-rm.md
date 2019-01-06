@@ -8,21 +8,19 @@ description: Removes a command from an event hooker
 
 Removes a command from an event hooker.
 
-```text
-filebrowser cmds rm [flags]
+```
+filebrowser cmds rm <event> <index> [index_end] [flags]
 ```
 
 ## Options
 
-```text
-  -e, --event string   corresponding event
-  -h, --help           help for rm
-  -i, --index uint     command index
+```
+  -h, --help   help for rm
 ```
 
 ### Inherited
 
-```text
+```
+  -c, --config string     config file path
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

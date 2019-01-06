@@ -6,18 +6,18 @@ description: Updates an existing user
 
 ## Synopsis
 
-Updates an existing user. Set the flags for the options you want to change.
+Updates an existing user. Set the flags for the
+options you want to change.
 
-```text
-filebrowser users update [flags]
+```
+filebrowser users update <id|username> [flags]
 ```
 
 ## Options
 
-```text
+```
       --commands strings    a list of the commands a user can execute
   -h, --help                help for update
-  -i, --id uint             id of the user
       --locale string       locale for users (default "en")
       --lockPassword        lock password
   -p, --password string     new password
@@ -29,16 +29,16 @@ filebrowser users update [flags]
       --perm.modify         modify perm for users (default true)
       --perm.rename         rename perm for users (default true)
       --perm.share          share perm for users (default true)
-      --scope string        scope for users
+      --scope string        scope for users (default ".")
       --sorting.asc         sorting by ascending order
       --sorting.by string   sorting mode (name, size or modified) (default "name")
-  -u, --username string     user to change or new username if flag 'id' is set
+  -u, --username string     new username
       --viewMode string     view mode for users (default "list")
 ```
 
 ### Inherited
 
-```text
+```
+  -c, --config string     config file path
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

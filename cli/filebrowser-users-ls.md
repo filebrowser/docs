@@ -8,19 +8,19 @@ description: List all users.
 
 List all users.
 
-```text
+```
 filebrowser users ls [flags]
 ```
 
 ## Options
 
-```text
+```
   -h, --help   help for ls
 ```
 
 ### Inherited
 
-```text
+```
+  -c, --config string     config file path
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-

@@ -8,19 +8,19 @@ description: Users management utility
 
 Users management utility.
 
-```text
+```
 filebrowser users [flags]
 ```
 
 ## Options
 
-```text
+```
   -h, --help   help for users
 ```
 
 ### Inherited
 
-```text
+```
+  -c, --config string     config file path
   -d, --database string   path to the database (default "./filebrowser.db")
 ```
-
