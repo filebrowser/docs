@@ -8,23 +8,23 @@ description: Remove a global rule or user rule
 
 Remove a global rule or user rule.
 
-```
+```text
 filebrowser rules rm <index> [index_end] [flags]
 ```
 
 ## Options
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|help|h|help for rm|
-|index||index of rule to remove|
+| :--- | :--- | :--- |
+| help | h | help for rm |
+| index |  | index of rule to remove |
 
 ### Inherited
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|config|c|config file path|
-|database|d|path to the database|
-|id|i|id of user to which the rules apply|
-|username|u|username of user to which the rules apply|
+| :--- | :--- | :--- |
+| config | c | config file path |
+| database | d | path to the database |
+| id | i | id of user to which the rules apply |
+| username | u | username of user to which the rules apply |
 

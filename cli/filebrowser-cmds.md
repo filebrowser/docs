@@ -8,20 +8,20 @@ description: Command runner management utility
 
 Command runner management utility.
 
-```
+```text
 filebrowser cmds [flags]
 ```
 
 ## Options
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|help|h|help for cmds|
+| :--- | :--- | :--- |
+| help | h | help for cmds |
 
 ### Inherited
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|config|c|config file path|
-|database|d|path to the database|
+| :--- | :--- | :--- |
+| config | c | config file path |
+| database | d | path to the database |
 

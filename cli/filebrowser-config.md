@@ -8,20 +8,20 @@ description: Configuration management utility
 
 Configuration management utility.
 
-```
+```text
 filebrowser config [flags]
 ```
 
 ## Options
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|help|h|help for config|
+| :--- | :--- | :--- |
+| help | h | help for config |
 
 ### Inherited
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|config|c|config file path|
-|database|d|path to the database|
+| :--- | :--- | :--- |
+| config | c | config file path |
+| database | d | path to the database |
 

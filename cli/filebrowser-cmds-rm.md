@@ -8,20 +8,20 @@ description: Removes a command from an event hooker
 
 Removes a command from an event hooker.
 
-```
+```text
 filebrowser cmds rm <event> <index> [index_end] [flags]
 ```
 
 ## Options
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|help|h|help for rm|
+| :--- | :--- | :--- |
+| help | h | help for rm |
 
 ### Inherited
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|config|c|config file path|
-|database|d|path to the database|
+| :--- | :--- | :--- |
+| config | c | config file path |
+| database | d | path to the database |
 

@@ -35,7 +35,20 @@ Although this is the fastest way to bootstrap an instance, we recommend you to t
 
 ## Docker
 
-SOON
+File Browser is also available as a Docker image. You can find it on [Docker Hub](https://hub.docker.com/r/filebrowser/filebrowser). The tag "latest" is bond to master branch which may contain breaking changes so we recommend you to use a different tag with the latest version.
+
+The usage is as follows:
+
+```bash
+docker run \
+    -v /path/to/root:/srv \
+    -v /path/filebrowser.db:/database.db \
+    -v /path/.filebrowser.json:/.filebrowser.json \
+    -p 80:80 \
+    filebrowser/filebrowser
+```
+
+By default, we already have a [configuration file with some defaults](https://github.com/filebrowser/filebrowser/blob/master/.filebrowser.docker.json) so you can just mount the root and the database. Although you can overwrite by mounting a directory to with a new config file.
 
 ## Caddy
 
