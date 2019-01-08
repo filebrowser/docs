@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [Features](features.md)
 * [Installation](installation.md)
 * [Upgrade from 1.x](upgrade-from-1.x.md)
 * [Command Line Interface](cli/README.md)
