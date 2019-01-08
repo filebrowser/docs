@@ -1,5 +1,5 @@
 ---
-description: Import users from a file.
+description: Import users from a file
 ---
 
 # filebrowser users import

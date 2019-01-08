@@ -1,22 +1,22 @@
 ---
-description: Export the configuration to a file
+description: Print the version number of File Browser
 ---
 
-# filebrowser config export
+# filebrowser users version
 
 ## Synopsis
 
-Export the configuration to a file.
+All software has versions. This is File Browser's
 
 ```
-filebrowser config export <filename> [flags]
+filebrowser users version [flags]
 ```
 
 ## Options
 
 | Name | Shorthand | Usage |
 |------|-----------|-------|
-|help|h|help for export|
+|help|h|help for version|
 
 ### Inherited
 

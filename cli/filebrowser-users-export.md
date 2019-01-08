@@ -1,12 +1,13 @@
 ---
-description: Export all users.
+description: Export all users to a file.
 ---
 
 # filebrowser users export
 
 ## Synopsis
 
-Export all users.
+Export all users to a json or yaml file. Please indicate the
+path to the file where you want to write the users.
 
 ```
 filebrowser users export <filename> [flags]

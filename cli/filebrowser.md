@@ -9,7 +9,7 @@ description: A stylish web-based file browser
 File Browser CLI lets you create the database to use with File Browser,
 manage your users and all the configurations without acessing the
 web interface.
-	
+
 If you've never run File Browser, you'll need to have a database for
 it. Don't worry: you don't need to setup a separate database server.
 We're using Bolt DB which is a single file database and all managed
@@ -31,6 +31,7 @@ The precedence of the configuration values are as follows:
 - flag
 - environment variable
 - configuration file
+- database values
 - defaults
 
 The environment variables are prefixed by "FB_" followed by the option
