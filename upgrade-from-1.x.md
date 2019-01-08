@@ -1,11 +1,11 @@
 # Upgrade from 1.x
 
-The newer version doesn't have a configuration file and a database. We now only have a database and a powerful command line to interact with it. Although, most options can be changed through the web interface.
+The newer version doesn't have obligatory a configuration file and a database. We now only have a database and a powerful command line to interact with it. Although, most options can be changed through the web interface.
 
-To import from a previous version, please run:
+You can keep using a configuration file for the options described by the [main command](cli/filebrowser.md). To import from a previous version, please run:
 
 ```bash
-filebrowser import --database=/path/to/new.db \
+filebrowser upgrade --database=/path/to/new.db \
     --old.database=/path/to/1.x.db \
     --old.config=/path/to/old/config.json
 ```
