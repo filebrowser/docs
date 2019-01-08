@@ -1,18 +1,22 @@
 ---
-description: Users management utility
+description: Export all users.
 ---
 
-# filebrowser users
+# filebrowser users export
 
 ## Synopsis
 
-Users management utility.
+Export all users.
+
+```
+filebrowser users export <filename> [flags]
+```
 
 ## Options
 
 | Name | Shorthand | Usage |
 |------|-----------|-------|
-|help|h|help for users|
+|help|h|help for export|
 
 ### Inherited
 

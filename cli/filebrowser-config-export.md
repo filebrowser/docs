@@ -1,18 +1,22 @@
 ---
-description: Users management utility
+description: Export the configuration to a file.
 ---
 
-# filebrowser users
+# filebrowser config export
 
 ## Synopsis
 
-Users management utility.
+Export the configuration to a file.
+
+```
+filebrowser config export <filename> [flags]
+```
 
 ## Options
 
 | Name | Shorthand | Usage |
 |------|-----------|-------|
-|help|h|help for users|
+|help|h|help for export|
 
 ### Inherited
 

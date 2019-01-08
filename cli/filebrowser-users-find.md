@@ -8,20 +8,20 @@ description: Find a user by username or id
 
 Find a user by username or id. If no flag is set, all users will be printed.
 
-```text
+```
 filebrowser users find <id|username> [flags]
 ```
 
 ## Options
 
 | Name | Shorthand | Usage |
-| :--- | :--- | :--- |
-| help | h | help for find |
+|------|-----------|-------|
+|help|h|help for find|
 
 ### Inherited
 
 | Name | Shorthand | Usage |
-| :--- | :--- | :--- |
-| config | c | config file path |
-| database | d | path to the database |
+|------|-----------|-------|
+|config|c|config file path|
+|database|d|database path|
 

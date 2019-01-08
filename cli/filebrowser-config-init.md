@@ -1,16 +1,19 @@
 ---
-description: Updates the configuration
+description: Initialize a new database
 ---
 
-# filebrowser config set
+# filebrowser config init
 
 ## Synopsis
 
-Updates the configuration. Set the flags for the options
-you want to change.
+Initialize a new database to use with File Browser. All of
+this options can be changed in the future with the command
+"filebrowser config set". The user related flags apply
+to the defaults when creating new users and you don't
+override the options.
 
 ```
-filebrowser config set [flags]
+filebrowser config init [flags]
 ```
 
 ## Options
@@ -26,7 +29,7 @@ filebrowser config set [flags]
 |branding.name||replace 'File Browser' by this name|
 |cert|t|tls certificate|
 |commands||a list of the commands a user can execute|
-|help|h|help for set|
+|help|h|help for init|
 |key|k|tls key|
 |locale||locale for users|
 |lockPassword||lock password|
