@@ -3,9 +3,10 @@
 To build a new authentication provider, you need to implement the [Auther interface](https://github.com/filebrowser/filebrowser/blob/master/auth/auth.go), whose method will be called on the login page after the user has submitted their login data.
 
 ```go
+// Auther is the authentication interface.
 type Auther interface {
-	Auth(r *http.Request) (*users.User, error)
-	SetStorage(*users.Storage)
+	// Auth is called to authenticate a request.
+	Auth(r *http.Request, s *users.Storage, root string) (*users.User, error)
 }
 ```
 
