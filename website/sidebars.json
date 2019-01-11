@@ -1,0 +1,42 @@
+{
+  "docs": {
+    "Features": ["features"],
+    "Installation": ["installation"],
+    "Command Line Interface": [
+      "cli/filebrowser-cmds-add",
+      "cli/filebrowser-cmds-ls",
+      "cli/filebrowser-cmds-rm",
+      "cli/filebrowser-cmds",
+      "cli/filebrowser-config-cat",
+      "cli/filebrowser-config-export",
+      "cli/filebrowser-config-import",
+      "cli/filebrowser-config-init",
+      "cli/filebrowser-config-set",
+      "cli/filebrowser-config",
+      "cli/filebrowser-hash",
+      "cli/filebrowser-rules-add",
+      "cli/filebrowser-rules-ls",
+      "cli/filebrowser-rules-rm",
+      "cli/filebrowser-rules",
+      "cli/filebrowser-upgrade",
+      "cli/filebrowser-users-add",
+      "cli/filebrowser-users-export",
+      "cli/filebrowser-users-find",
+      "cli/filebrowser-users-import",
+      "cli/filebrowser-users-ls",
+      "cli/filebrowser-users-rm",
+      "cli/filebrowser-users-update",
+      "cli/filebrowser-users-version",
+      "cli/filebrowser-users",
+      "cli/filebrowser"
+    ],
+    "Contributing": [
+      "contributing/auth-provider",
+      "contributing/ci-releases",
+      "contributing/translations",
+      "contributing/code-of-conduct"
+    ]
+  },
+  "docs-other": {
+  }
+}
