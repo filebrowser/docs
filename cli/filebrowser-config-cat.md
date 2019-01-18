@@ -8,20 +8,20 @@ description: Prints the configuration
 
 Prints the configuration.
 
-```
+```text
 filebrowser config cat [flags]
 ```
 
 ## Options
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|help|h|help for cat|
+| :--- | :--- | :--- |
+| help | h | help for cat |
 
 ### Inherited
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|config|c|config file path|
-|database|d|database path|
+| :--- | :--- | :--- |
+| config | c | config file path |
+| database | d | database path |
 

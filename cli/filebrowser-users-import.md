@@ -8,22 +8,22 @@ description: Import users from a file
 
 Import users from a file.
 
-```
+```text
 filebrowser users import <filename> [flags]
 ```
 
 ## Options
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|help|h|help for import|
-|overwrite||overwrite users with the same id/username combo|
-|replace||replace the entire user base|
+| :--- | :--- | :--- |
+| help | h | help for import |
+| overwrite |  | overwrite users with the same id/username combo |
+| replace |  | replace the entire user base |
 
 ### Inherited
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|config|c|config file path|
-|database|d|database path|
+| :--- | :--- | :--- |
+| config | c | config file path |
+| database | d | database path |
 

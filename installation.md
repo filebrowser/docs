@@ -31,7 +31,7 @@ Done! It will bootstrap a database in which all the configurations and users are
 You must change the password and, if you can, the username for the best security possible.
 {% endhint %}
 
-Although this is the fastest way to bootstrap an instance, we recommend you to take a look at the possibility of options on [`init`](cli/filebrowser-init.md) and [`config set`](cli/filebrowser-config-set.md) to make the installation as safe and customized as it can be.
+Although this is the fastest way to bootstrap an instance, we recommend you to take a look at the possibility of options on [`init`]() and [`config set`](cli/filebrowser-config-set.md) to make the installation as safe and customized as it can be.
 
 ## Docker
 
@@ -52,5 +52,21 @@ By default, we already have a [configuration file with some defaults](https://gi
 
 ## Caddy
 
-SOON
+File Browser was born as a [Caddy](https://caddyserver.com/) plugin. Caddy is a fantastic web server with automatic HTTPS. And despite its growth, we still ❤ and support Caddy. It is available to download at their [download page](https://caddyserver.com/download), where you just need to select `http.filebrowser` on the plugins list.
+
+```text
+filebrowser [url] [scope] {
+    database          path
+    auth_method       method
+    auth_header       header
+    recaptcha_key     key
+    recaptcha_secret  secret
+    recaptcha_host    host
+}    
+```
+
+* `url` is the URL path where you will access File Browser. Defaults to `/`.
+* `path` is the database path where the settings will be stored.
+* `method` is the [authentication method](configuration/authentication-method.md) you want to use.
+* `header`, `key`, `secret` and `host` are specific options for each [authentication method](configuration/authentication-method.md).
 

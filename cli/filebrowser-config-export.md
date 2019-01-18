@@ -8,20 +8,20 @@ description: Export the configuration to a file
 
 Export the configuration to a file.
 
-```
+```text
 filebrowser config export <filename> [flags]
 ```
 
 ## Options
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|help|h|help for export|
+| :--- | :--- | :--- |
+| help | h | help for export |
 
 ### Inherited
 
 | Name | Shorthand | Usage |
-|------|-----------|-------|
-|config|c|config file path|
-|database|d|database path|
+| :--- | :--- | :--- |
+| config | c | config file path |
+| database | d | database path |
 
