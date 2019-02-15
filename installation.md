@@ -10,7 +10,7 @@ The quickest way for beginners to start using File Browser is by opening your te
 {% tab title="Unix" %}
 ```bash
 curl -fsSL https://filebrowser.xyz/get.sh | bash
-filebrowser -s /path/to/your/files
+filebrowser -r /path/to/your/files
 ```
 {% endtab %}
 
