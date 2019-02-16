@@ -4,7 +4,13 @@ Right now, there are three possible authentication methods. Each one of them has
 
 ## JSON Auth \(default\)
 
-We call it JSON Authentication but it is just the default authentication method and the one that is provided by default if you don't make any changes. Although, this method can be extended with **reCAPTCHA** verification during login:
+We call it JSON Authentication but it is just the default authentication method and the one that is provided by default if you don't make any changes. It is set by default, but if you've made changes before you can revert to using JSON auth:
+
+```text
+filebrowser config set --auth.method=json
+```
+
+This method can also be extended with **reCAPTCHA** verification during login:
 
 ```bash
 filebrowser config set --recaptcha.key site-key --recaptcha.secret private-key
