@@ -14,6 +14,7 @@ After implementing the interface you should:
 
 1. Add it to [`auth` directory](https://github.com/filebrowser/filebrowser/blob/master/auth).
 2. Add it to the [configuration parser](https://github.com/filebrowser/filebrowser/blob/master/cmd/config.go) for the CLI.
+3. Add it to the [`authBackend.Get`](https://github.com/filebrowser/filebrowser/blob/master/storage/bolt/auth.go).
 
 If you need to add more flags, please update the function `addConfigFlags`.
 
