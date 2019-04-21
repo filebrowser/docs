@@ -5,8 +5,8 @@ To build a new authentication provider, you need to implement the [Auther interf
 ```go
 // Auther is the authentication interface.
 type Auther interface {
-	// Auth is called to authenticate a request.
-	Auth(r *http.Request, s *users.Storage, root string) (*users.User, error)
+    // Auth is called to authenticate a request.
+    Auth(r *http.Request, s *users.Storage, root string) (*users.User, error)
 }
 ```
 
@@ -17,6 +17,4 @@ After implementing the interface you should:
 3. Add it to the [`authBackend.Get`](https://github.com/filebrowser/filebrowser/blob/master/storage/bolt/auth.go).
 
 If you need to add more flags, please update the function `addConfigFlags`.
-
-
 

@@ -13,7 +13,9 @@ filebrowser config set --auth.method=json
 This method can also be extended with **reCAPTCHA** verification during login:
 
 ```bash
-filebrowser config set --recaptcha.key site-key --recaptcha.secret private-key
+filebrowser config set --auth.method=json \
+    --recaptcha.key site-key \
+    --recaptcha.secret private-key
 ```
 
 By default, we use [Google's reCAPTCHA](https://www.google.com/recaptcha/intro/v3.html) service. If you live in China, or want to use other provider, you can change the host with the following command:
@@ -23,6 +25,10 @@ filebrowser config set --recaptcha.host https://recaptcha.net
 ```
 
 Where `https://recaptcha.net` is any provider you want.
+
+{% hint style="danger" %}
+Note that you **always** need to set the `--auth.method` flag when changing authentication configurations and that it will completely overwrite your current settings. [This is a known issue.](https://github.com/filebrowser/filebrowser/issues/715)
+{% endhint %}
 
 ## Proxy Header
 
