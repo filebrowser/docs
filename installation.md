@@ -17,7 +17,7 @@ filebrowser -r /path/to/your/files
 {% tab title="Windows" %}
 ```bash
 iwr -useb https://filebrowser.xyz/get.ps1 | iex
-filebrowser -s /path/to/your/files
+filebrowser -r /path/to/your/files
 ```
 {% endtab %}
 {% endtabs %}
