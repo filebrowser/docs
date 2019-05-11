@@ -23,11 +23,6 @@ We use semantic versioning. For more info check [semver.org](https://semver.org)
       1. Build the release artifacts for all supported platforms and a new docker image \(see [`.goreleaser.yml`](https://github.com/filebrowser/filebrowser/blob/master/.goreleaser.yml) for more information\).
       2. The artifacts are published to [GitHub Releases](https://github.com/filebrowser/filebrowser/releases).
       3. The tagged docker image is published to [hub.docker.com/r/filebrowser/filebrowser](https://hub.docker.com/r/filebrowser/filebrowser/).
-      4. The `rice-box.go` is committed, tagged and then pushed to a branch on [filebrowser/caddy](https://github.com/filebrowser/caddy) which must then be merged by a maintainer.
-
-{% hint style="warning" %}
-We would benefit if a PR would be automatically created. It [can be done](https://developer.github.com/v3/pulls/#create-a-pull-request) through GitHub REST API although we're not sure how to handle the [authentication](https://developer.github.com/v3/auth/). If you're willing to help us, please [let us know](https://github.com/filebrowser/filebrowser/issues/new).
-{% endhint %}
 
 
 

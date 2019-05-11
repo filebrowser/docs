@@ -16,8 +16,6 @@ This modular approach is meant to make contributing easier for users willing to 
 
 This structure is also valuable for third parties to develop alternative implementations of any of the pieces. E.g. a different frontend can be written using Angular, but keeping the same backend. Equally, a different backend can be written using Python or Ruby, but keeping the same frontend.
 
-Furthermore, File Browser can also be used as a middleware for another app. Indeed, it is available as a plugin for [Caddy](https://caddyserver.com/). For more information about this plugin, please see the repository [filebrowser/caddy](https://github.com/filebrowser/caddy).
-
 ## Get the source code
 
 We encourage you to use git to manage your fork. The main repository has a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to the frontend repository to allow easy development and deployment. So, to clone the main repository and its submodules, just run:
