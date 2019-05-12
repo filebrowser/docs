@@ -1,6 +1,6 @@
 # Caddy
 
-We recommend using [Caddy](https://caddyserver.com/) server as a proxy for File Browser. Caddy is a fantastic web server \(such as Nginx or Apache\) but with automatic HTTPS through Let's Encrypt. It's really fast and easy to use.
+We recommend using [Caddy](https://caddyserver.com/) server as a proxy for File Browser. Caddy is a blazing fast and fantastic web server \(such as Nginx or Apache\) with automatic HTTPS through Let's Encrypt. It's really easy to use too.
 
 So, how to use it with File Browser? We just need the [`proxy` directive](https://caddyserver.com/docs/proxy)! We will assume you already have File Browser running on port 8080.
 
