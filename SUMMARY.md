@@ -2,7 +2,8 @@
 
 * [Welcome](README.md)
 * [Features](features.md)
-* [Installation](installation.md)
+* [Installation](installation/README.md)
+  * [Caddy](installation/caddy.md)
 * [Upgrade from 1.x](upgrade-from-1.x.md)
 * [Command Line Interface](cli/README.md)
   * [filebrowser](cli/filebrowser.md)

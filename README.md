@@ -8,7 +8,7 @@ Welcome to File Browser's official documentation. Here you can find probably any
 
 We focus on doing one thing, but doing it well. One of the crucial pieces of File Browser is our community which is always asking us for new features or reporting issues that might happen. We recommend you vividly to check our [GitHub repository](https://github.com/filebrowser/filebrowser).
 
-{% page-ref page="installation.md" %}
+{% page-ref page="installation/" %}
 
 {% page-ref page="cli/" %}
 

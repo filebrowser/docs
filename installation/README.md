@@ -31,7 +31,7 @@ Done! It will bootstrap a database in which all the configurations and users are
 You must change the password and, if you can, the username for the best security possible.
 {% endhint %}
 
-Although this is the fastest way to bootstrap an instance, we recommend you to take a look at the possibility of options on [`init`](installation.md) and [`config set`](cli/filebrowser-config-set.md) to make the installation as safe and customized as it can be.
+Although this is the fastest way to bootstrap an instance, we recommend you to take a look at the possibility of options on [`init`](./) and [`config set`](../cli/filebrowser-config-set.md) to make the installation as safe and customized as it can be.
 
 ## Docker
 
@@ -49,8 +49,4 @@ docker run \
 ```
 
 By default, we already have a [configuration file with some defaults](https://github.com/filebrowser/filebrowser/blob/master/.docker.json) so you can just mount the root and the database. Although you can overwrite by mounting a directory to with a new config file.
-
-## Caddy
-
-File Browser was born as a [Caddy](https://caddyserver.com/) plugin. Caddy is a fantastic web server with automatic HTTPS. Although we don't support Caddy as an extension anymore, it's really simple to set up File Browser with the other instructions you can see in this page, and then proxy it via the [`proxy` directive.](https://caddyserver.com/docs/proxy)
 
