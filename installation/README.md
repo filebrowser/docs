@@ -35,9 +35,7 @@ Although this is the fastest way to bootstrap an instance, we recommend you to t
 
 ## Docker
 
-File Browser is also available as a Docker image. You can find it on [Docker Hub](https://hub.docker.com/r/filebrowser/filebrowser). The tag "latest" is bond to master branch which may contain breaking changes so we recommend you to use a different tag with the latest version.
-
-The usage is as follows:
+File Browser is also available as a Docker image. You can find it on [Docker Hub](https://hub.docker.com/r/filebrowser/filebrowser). The usage is as follows:
 
 ```bash
 docker run \
