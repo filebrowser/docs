@@ -4,27 +4,20 @@ If you're interested in contributing to this project, this is the best place to 
 
 ## Project Structure
 
-This project is composed of two main repositories, both hosted at GitHub:
+The project is mainly composed by one [repository](https://github.com/filebrowser/filebrowser), hosted on GitHub. The backend side of the application is written in [Go](https://golang.org/), while the frontend \(located on a subdirectory of the same name\) is written in [Vue.js](https://vuejs.org/), a framework to produce [JavaScript](https://en.wikipedia.org/wiki/JavaScript), [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and [HTML](https://www.w3.org/html/).
 
-* The [**backend**](https://github.com/filebrowser/filebrowser)**,** which is entirely written in [Go](https://golang.org/).
-* The [**frontend**](https://github.com/filebrowser/frontend), which is written in [Vue.js](https://vuejs.org/), a framework to produce [JavaScript](https://en.wikipedia.org/wiki/JavaScript), [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and [HTML](https://www.w3.org/html/).
-
-This modular approach is meant to make contributing easier for users willing to focus on/reuse only some piece, instead of being forced to analyze the whole project. However, due to the tight coupling required by some features, basic knowledge of both Go and Vue.js is recommended.
+Due to the tight coupling required by some features, basic knowledge of both Go and Vue.js is recommended.
 
 * Learn Go: [https://github.com/golang/go/wiki/Learn](https://github.com/golang/go/wiki/Learn)
 * Learn Vue.js: [https://vuejs.org/v2/guide/index.html](https://vuejs.org/v2/guide/index.html)
 
-This structure is also valuable for third parties to develop alternative implementations of any of the pieces. E.g. a different frontend can be written using Angular, but keeping the same backend. Equally, a different backend can be written using Python or Ruby, but keeping the same frontend.
-
 ## Get the source code
 
-We encourage you to use git to manage your fork. The main repository has a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to the frontend repository to allow easy development and deployment. So, to clone the main repository and its submodules, just run:
+We encourage you to use git to manage your fork. To clone the main repository, just run:
 
 ```bash
-git clone --recurse-submodules https://github.com/filebrowser/filebrowser
+git clone https://github.com/filebrowser/filebrowser
 ```
-
-Since it is a submodule, when developing the frontend remember to update the backend repository accordingly.
 
 ## Build
 
@@ -33,6 +26,8 @@ Since it is a submodule, when developing the frontend remember to update the bac
 We are using [Node.js](https://nodejs.org/en/) on the frontend to manage the build process. The steps to build it are:
 
 ```bash
+# From the root of the repo, go to frontend/
+cd frontend
 # Install the dependencies
 npm install
 # Build the frontend
