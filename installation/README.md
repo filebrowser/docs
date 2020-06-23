@@ -9,14 +9,14 @@ The quickest way for beginners to start using File Browser is by opening your te
 {% tabs %}
 {% tab title="Unix" %}
 ```bash
-curl -fsSL https://filebrowser.xyz/get.sh | bash
+curl -fsSL https://filebrowser.org/get.sh | bash
 filebrowser -r /path/to/your/files
 ```
 {% endtab %}
 
 {% tab title="Windows" %}
 ```bash
-iwr -useb https://filebrowser.xyz/get.ps1 | iex
+iwr -useb https://filebrowser.org/get.ps1 | iex
 filebrowser -r /path/to/your/files
 ```
 {% endtab %}
@@ -47,3 +47,4 @@ docker run \
 ```
 
 By default, we already have a [configuration file with some defaults](https://github.com/filebrowser/filebrowser/blob/master/.docker.json) so you can just mount the root and the database. Although you can overwrite by mounting a directory to with a new config file. If you don't already have a database file, make sure to create a new empty file under the path you specified. Otherwise, Docker will create an empty folder instead of an empty file, resulting in an error when mounting the database into the container.
+
