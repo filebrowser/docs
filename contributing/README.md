@@ -34,7 +34,7 @@ npm install
 npm run build
 ```
 
-This will install the dependencies and build the frontend so you can then embed it into the Go app. Although, if you want to play with it, you'll get bored of building it after every change you do. So, you can run the command bellow to watch for changes:
+This will install the dependencies and build the frontend so you can then embed it into the Go app. Although, if you want to play with it, you'll get bored of building it after every change you do. So, you can run the command below to watch for changes:
 
 ```bash
 npm run watch
@@ -48,7 +48,7 @@ First of all, you need to download the required dependencies. We are using the b
 go mod download
 ```
 
-The magic of File Browser is that the static assets are bundled into the final binary. For that, we use [go.rice](https://github.com/GeertJohan/go.rice/), which you'll need to [install](https://github.com/GeertJohan/go.rice/#installation). Then you can just run the commands bellow to embed the assets:
+The magic of File Browser is that the static assets are bundled into the final binary. For that, we use [go.rice](https://github.com/GeertJohan/go.rice/), which you'll need to [install](https://github.com/GeertJohan/go.rice/#installation). Then you can just run the commands below to embed the assets:
 
 ```bash
 cd http
