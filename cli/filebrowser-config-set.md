@@ -24,7 +24,7 @@ filebrowser config set [flags]
 | branding.files |  | path to directory with images and custom styles |
 | branding.name |  | replace 'File Browser' by this name |
 | cert | t | tls certificate |
-| commands |  | a list of the commands a user can execute |
+| commands |  | a comma-separated list of the commands a user can execute |
 | help | h | help for set |
 | key | k | tls key |
 | locale |  | locale for users |
