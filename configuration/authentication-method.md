@@ -21,7 +21,7 @@ filebrowser config set --auth.method=json \
 By default, we use [Google's reCAPTCHA](https://developers.google.com/recaptcha/docs/display) service. If you live in China, or want to use other provider, you can change the host with the following command:
 
 ```bash
-filebrowser config set --recaptcha.host https://recaptcha.net 
+filebrowser config set --recaptcha.host https://recaptcha.net
 ```
 
 Where `https://recaptcha.net` is any provider you want.

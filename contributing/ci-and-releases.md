@@ -18,5 +18,3 @@ We use semantic versioning. For more info check [semver.org](https://semver.org)
       2. The artifacts are published to [GitHub Releases](https://github.com/filebrowser/filebrowser/releases).
       3. The tagged docker image is published to [hub.docker.com/r/filebrowser/filebrowser](https://hub.docker.com/r/filebrowser/filebrowser/).
 
-
-

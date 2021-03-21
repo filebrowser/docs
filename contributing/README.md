@@ -63,5 +63,3 @@ To build File Browser is just like any other Go program:
 go build
 ```
 
-
-
