@@ -11,6 +11,7 @@ The quickest way for beginners to start using File Browser is by opening your te
 ```
 brew tap filebrowser/tap
 brew install filebrowser
+filebrowser -r /path/to/your/files
 ```
 {% endtab %}
 
