@@ -17,14 +17,14 @@ filebrowser -r /path/to/your/files
 
 {% tab title="Unix" %}
 ```bash
-curl -fsSL https://filebrowser.org/get.sh | bash
+curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
 filebrowser -r /path/to/your/files
 ```
 {% endtab %}
 
 {% tab title="Windows" %}
 ```bash
-iwr -useb https://filebrowser.org/get.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/filebrowser/get/master/get.ps1 | iex
 filebrowser -r /path/to/your/files
 ```
 {% endtab %}
