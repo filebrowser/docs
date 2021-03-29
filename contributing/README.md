@@ -48,14 +48,8 @@ First of all, you need to download the required dependencies. We are using the b
 go mod download
 ```
 
-The magic of File Browser is that the static assets are bundled into the final binary. For that, we use [go.rice](https://github.com/GeertJohan/go.rice/), which you'll need to [install](https://github.com/GeertJohan/go.rice/#installation). Then you can just run the commands below to embed the assets:
-
-```bash
-cd http
-rice embed-go
-```
-
-That will generate a `rice-box.go` file which has all the files from `frontend/dist` in it. Although, during development go.rice is smart enough to read the files from the file system directly. So you don't need these two steps during development. Although you **must** run them before building the final binary.
+The magic of File Browser is that the static assets are bundled into the final binary. For that, we use [Go embed.FS](https://golang.org/pkg/embed/).
+The files from `frontend/dist` will be embedded during the build process.
 
 To build File Browser is just like any other Go program:
 
