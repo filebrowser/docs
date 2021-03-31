@@ -14,11 +14,17 @@ Also, during the execution of the commands set for those hooks, there will be so
 * `USERNAME` with the user's username.
 * `DESTINATION` with the absolute path to the destination. Only used for **copy** and **rename.**
 
+Before setup the command runner, make sure you have set the correct shell in the configuration, for example:
+
+```bash
+filebrowser config set --shell "bash -c"
+```
+
 At this moment, you can edit the commands via the command line interface, using the following commands \(please check the flag `--help` to know more about them\):
 
 ```bash
-filebrowser cmds add -e="before_copy" -c="echo $FILE"
-filebrowser cmd rm -e="before_copy" -i 0
+filebrowser cmds add "before_copy" "echo \$FILE"
+filebrowser cmd rm "before_copy" 0
 filebrowser cmds ls
 ```
 
