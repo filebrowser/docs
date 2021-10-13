@@ -39,7 +39,7 @@ Done! It will bootstrap a database in which all the configurations and users are
 You must change the password and, if you can, the username for the best security possible.
 {% endhint %}
 
-Although this is the fastest way to bootstrap an instance, we recommend you to take a look at the possibility of options on [`init`](installation.md) and [`config set`](cli/filebrowser-config-set.md) to make the installation as safe and customized as it can be.
+Although this is the fastest way to bootstrap an instance, we recommend you to take a look at the possibility of options on [`config init`](cli/filebrowser-config-init.md) and [`config set`](cli/filebrowser-config-set.md) to make the installation as safe and customized as it can be.
 
 ## Docker
 
