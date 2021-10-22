@@ -1,13 +1,55 @@
-# init scripts and daemonize
+# Daemonize and init scripts
 
 The purpose is to keep the program simple, but here we documented the best way to keep an instance in service as a daemon in the main operating systems 
+
+1. Sometimes we do not have access to the system tools, or not enought privilegies, in this case we will use the most standard, the shell and we will assume we have access to bash we have `nohup` (bash) and `setsid` (util-linux)
+2. If we have direct access to system resources, we can use a daemon script and integrated to the system init process by example using `SysVinit` or `OpenRC`
+
+* [Using bash](#bash)
+* [Using nohup](#nohup)
+* [Using setsid](#setsid)
+* [Sysvinit script](#sysvinit)
+* [Openrc script](#openrc)
+
+## Bash
+
+Use this way only for testing purposes, is a easy to do way but it depends on bash shell access and available permissions, just run the first command and then the second adn logout:
+
+``` bash
+FB_ROOT=/srv FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_USERNAME=adminuser /usr/local/filebrowser &
+
+exec </dev/null >/dev/null 2>/dev/null
+```
+
+## nohup
+
+Is the most easy way but `nohup` has a disadvantage in the sense that the process group of the process remains the same so the process running with nohup is vulnerable to any signal sent to the whole process group (like Ctrl + C).
+
+``` bash
+FB_ROOT=/srv FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_USERNAME=adminuser nohup /srv/filebrowser > /srv/filebrowser.log 2>&1 &
+
+```
+
+Take care that when you executed it will return and output, the `JOBID` and the `PID` number, you can use those to return to the process: just do `fg %JOBID` and you are like a no backgroud task.
+
+
+## setsid
+
+This is quite more standard .. but the `setsid` command must come from the `util-linux` package, it does not depends on `bash` shell and detach prefectly.
+
+``` bash
+FB_ROOT=/srv FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_USERNAME=adminuser setsid /srv/filebrowser > /srv/filebrowser.log 2>&1
+
+```
+
+It allocates a new process group to the process being executed and hence, the process created is totally in a newly allocated process group and can execute safely without fear of being killed even after session logout.
+
 
 ## SysVinit
 
 This init script can be used on Debian and Devuan based system, for others sysv-init style you can manage the start and stop commands.
 
 The configuration can be managed by using a `/etc/default/filebrowser` file with the environment variables of `FB_`:
-
 
 ``` bash
 #!/bin/sh
@@ -17,20 +59,16 @@ The configuration can be managed by using a `/etc/default/filebrowser` file with
 # Required-Stop:     $local_fs $network $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: filebrowser Web File Browser 
 # Description:       filebrowser Web File Browser management api and gui
 ### END INIT INFO
-
 # Author: PICCORO Lenz McKAY <mckaygerhard@gmail.com>
-
-# Do NOT "set -e" and "/usr/local/bin" changes depending of install location on devuan/debian based systems
 
 PATH=/usr/bin:/usr/local/bin
 DESC="simple Web File Browser manager"
 NAME=filebrowser
 FB_ROOT=/srv
 FB_DATABASE=$FB_ROOT/filebrowser.db
-FB_CONFIG=/etc/filebrowser.json
+FB_CONFIG=/etc/filebrowser/filebrowser.json
 FB_PORT=19600
 FB_ADDRESS=127.0.0.1
 FB_BASEURL=/filebrowser/
@@ -58,13 +96,11 @@ DAEMON_OPTS="  "
 
 . /lib/lsb/init-functions
 
-do_start()
-{
+do_start() {
     start-stop-daemon --start --quiet --make-pidfile --pidfile $PIDFILE --exec $DAEMON --name $NAME --background -- $DAEMON_OPTS || return 2
 }
 
-resetconf()
-{
+resetconf() {
     rm -rf $FB_DATABASE
 }
 
@@ -78,7 +114,6 @@ do_stop()
     rm -f $PIDFILE
     return "$RETVAL"
 }
-
 
 case "$1" in
   start)
@@ -137,20 +172,18 @@ case "$1" in
     ;;
 esac
 
-:
 ```
 
 ## OpenRC
 
 This init script can be used on Alpine and Gentoo based systems like Funtoo, for others openrc style you can manage the start and stop commands.
 
-The configuration unfortunatelly cannot be managed by using a `/etc/conf.d/filebrowser` file with the environment variables of `FB_`:
-
-
+The configuration unfortunatelly cannot be managed by using a `/etc/conf.d/filebrowser` file yet with the environment variables of `FB_`:
 
 ```bash
 #!/sbin/openrc-run
 # /usr/local must be adapted to installed binary
+# Author: PICCORO Lenz McKAY <mckaygerhard@gmail.com>
 
 name=$RC_SVCNAME
 cfgfile="/etc/$RC_SVCNAME/$RC_SVCNAME.conf"
