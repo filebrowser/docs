@@ -48,7 +48,7 @@ File Browser is also available as a Docker image. You can find it on [Docker Hub
 ```bash
 docker run \
     -v /path/to/root:/srv \
-    -v /path/to/filebrowser.db:/database/database.db \
+    -v /path/to/filebrowser.db:/database/filebrowser.db \
     -v /path/to/settings.json:/config/settings.json \
     -e PUID=$(id -u) \
     -e PGID=$(id -g) \
