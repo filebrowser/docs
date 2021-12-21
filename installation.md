@@ -45,7 +45,21 @@ Although this is the fastest way to bootstrap an instance, we recommend you to t
 
 File Browser is also available as a Docker image. You can find it on [Docker Hub](https://hub.docker.com/r/filebrowser/filebrowser). The usage is as follows:
 
-```bash
+{% tabs %}
+{% tab title="alpine" %}
+```shell
+docker run \
+    -v /path/to/root:/srv \
+    -v /path/filebrowser.db:/database.db \
+    -v /path/.filebrowser.json:/.filebrowser.json \
+    -u $(id -u):$(id -g) \
+    -p 8080:80 \
+    filebrowser/filebrowser
+```
+{% endtab %}
+
+{% tab title="linuxserver" %}
+```shell
 docker run \
     -v /path/to/root:/srv \
     -v /path/to/filebrowser.db:/database/filebrowser.db \
@@ -53,7 +67,9 @@ docker run \
     -e PUID=$(id -u) \
     -e PGID=$(id -g) \
     -p 8080:80 \
-    filebrowser/filebrowser
+    filebrowser/filebrowser:s6
 ```
+{% endtab %}
+{% endtabs %}
 
 By default, we already have a [configuration file with some defaults](https://github.com/filebrowser/filebrowser/blob/master/docker/root/defaults/settings.json) so you can just mount the root and the database. Although you can overwrite by mounting a directory with a new config file. If you don't already have a database file, make sure to create a new empty file under the path you specified. Otherwise, Docker will create an empty folder instead of an empty file, resulting in an error when mounting the database into the container.
