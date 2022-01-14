@@ -13,7 +13,7 @@ The purpose is to keep the program simple, but here we documented the best way t
 
 ## Bash
 
-Use this way only for testing purposes, is a easy to do way but it depends on bash shell access and available permissions, just run the first command and then the second adn logout:
+Just run the first command and then the second adn logout:
 
 ``` bash
 FB_ROOT=/srv FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_USERNAME=adminuser /usr/local/filebrowser &
@@ -23,27 +23,21 @@ exec </dev/null >/dev/null 2>/dev/null
 
 ## nohup
 
-Is the most easy way but `nohup` has a disadvantage in the sense that the process group of the process remains the same so the process running with nohup is vulnerable to any signal sent to the whole process group (like Ctrl + C).
+After run this command will return the `JOBID` and the `PID` number:
 
 ``` bash
 FB_ROOT=/srv FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_USERNAME=adminuser nohup /srv/filebrowser > /srv/filebrowser.log 2>&1 &
 
 ```
 
-Take care that when you executed it will return and output, the `JOBID` and the `PID` number, you can use those to return to the process: just do `fg %JOBID` and you are like a no backgroud task.
-
-
 ## setsid
 
-This is quite more standard .. but the `setsid` command must come from the `util-linux` package, it does not depends on `bash` shell and detach prefectly.
+From the `util-linux` package:
 
 ``` bash
 FB_ROOT=/srv FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_USERNAME=adminuser setsid /srv/filebrowser > /srv/filebrowser.log 2>&1
 
 ```
-
-It allocates a new process group to the process being executed and hence, the process created is totally in a newly allocated process group and can execute safely without fear of being killed even after session logout.
-
 
 ## SysVinit
 
@@ -59,7 +53,7 @@ The configuration can be managed by using a `/etc/default/filebrowser` file with
 # Required-Stop:     $local_fs $network $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Description:       filebrowser Web File Browser management api and gui
+# Description:       File Browser management
 ### END INIT INFO
 # Author: PICCORO Lenz McKAY <mckaygerhard@gmail.com>
 
@@ -80,19 +74,12 @@ DAEMON=/usr/local/bin/$NAME
 
 [ -x "$DAEMON" ] || exit 0
 
-[ -r /etc/default/$NAME ] && . /etc/default/$NAME
-
-export FB_ROOT=$FB_ROOT
-export FB_DATABASE=$FB_DATABASE
-export FB_PORT=$FB_PORT
-export FB_CONFIG=$FB_CONFIG
-export FB_BASEURL=$FB_BASEURL
-export FB_LOG=$FB_LOG
-export FB_USERNAME=$FB_USERNAME
-# if you wants "--noauth" or extra settings put in the "/etc/default/$NAME" but db and files must be reseted
+# if you wants "--noauth" or extra settings put in the "/etc/default/$NAME" 
 DAEMON_OPTS="  "
 
 . /lib/init/vars.sh
+
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
 . /lib/lsb/init-functions
 
@@ -206,7 +193,7 @@ checkconfig() {
 start() {
     checkconfig || return 1
     ebegin "Starting ${SVCNAME}"
-    start-stop-daemon --start --quiet --exec /usr/sbin/lighttpd --pidfile "${FBPID}" --make-pidfile -- 
+    start-stop-daemon --start --quiet --exec ${command} --pidfile "${FBPID}" --make-pidfile -- 
     eend $?
 }
 
