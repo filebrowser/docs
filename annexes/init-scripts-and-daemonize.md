@@ -16,7 +16,7 @@ The purpose is to keep the program simple, but here we documented the best way t
 Just run the first command and then the second adn logout:
 
 ``` bash
-FB_ROOT=/srv FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_USERNAME=adminuser /usr/local/filebrowser &
+FB_ROOT=/var/lib/filebrowser/ FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_PORT=8090 /usr/local/bin/filebrowser &
 
 exec </dev/null >/dev/null 2>/dev/null
 ```
@@ -26,7 +26,7 @@ exec </dev/null >/dev/null 2>/dev/null
 After run this command will return the `JOBID` and the `PID` number:
 
 ``` bash
-FB_ROOT=/srv FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_USERNAME=adminuser nohup /srv/filebrowser > /srv/filebrowser.log 2>&1 &
+FB_ROOT=/var/lib/filebrowser/ FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_PORT=8090 nohup /usr/local/bin/filebrowser > /var/lib/filebrowser/filebrowser.log 2>&1 &
 
 ```
 
@@ -35,7 +35,7 @@ FB_ROOT=/srv FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_USE
 From the `util-linux` package:
 
 ``` bash
-FB_ROOT=/srv FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_USERNAME=adminuser setsid /srv/filebrowser > /srv/filebrowser.log 2>&1
+FB_ROOT=/var/lib/filebrowser/ FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_PORT=8090 setsid /usr/local/bin/filebrowser > /var/lib/filebrowser/filebrowser.log 2>&1
 
 ```
 
@@ -60,14 +60,10 @@ The configuration can be managed by using a `/etc/default/filebrowser` file with
 PATH=/usr/bin:/usr/local/bin
 DESC="simple Web File Browser manager"
 NAME=filebrowser
-FB_ROOT=/srv
+FB_ROOT=/var/lib/filebrowser/
 FB_DATABASE=$FB_ROOT/filebrowser.db
-FB_CONFIG=/etc/filebrowser/filebrowser.json
-FB_PORT=19600
-FB_ADDRESS=127.0.0.1
-FB_BASEURL=/filebrowser/
+FB_PORT=8090
 FB_LOG=/var/log/$NAME
-FB_USERNAME=adminuser
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
 DAEMON=/usr/local/bin/$NAME
@@ -75,7 +71,7 @@ DAEMON=/usr/local/bin/$NAME
 [ -x "$DAEMON" ] || exit 0
 
 # if you wants "--noauth" or extra settings put in the "/etc/default/$NAME" 
-DAEMON_OPTS="  "
+DAEMON_OPTS=""
 
 . /lib/init/vars.sh
 
@@ -137,22 +133,6 @@ case "$1" in
 	;;
     esac
     ;;
-  resetconf)
-    log_daemon_msg "Resetting/erasing all and make new config instance of $DESC" "$NAME"
-    do_stop
-    case "$?" in
-      0)
-	resetconf
-	do_start
-	case "$?" in
-	    0) log_end_msg 0 ;;
-	esac
-	;;
-      *)
-	log_end_msg 1
-	;;
-    esac
-    ;;
   *)
     echo "Usage: $SCRIPTNAME {start|stop|status|restart|resetconf}" >&2
     exit 3
@@ -169,25 +149,21 @@ The configuration unfortunatelly cannot be managed by using a `/etc/conf.d/fileb
 
 ```bash
 #!/sbin/openrc-run
-# /usr/local/bin must be adapted to installed binary
-# Author: PICCORO Lenz McKAY <mckaygerhard@gmail.com>
-
+DATA_DIR=/var/lib/$RC_SVCNAME
+ROOT=/var/lib/$RC_SVCNAME
+CONFIG=/etc/$RC_SVCNAME/config.json
 name=$RC_SVCNAME
-cfgfile="/etc/$RC_SVCNAME/$RC_SVCNAME.conf"
 command="/usr/local/bin/filebrowser"
-command_args="--database /var/lib/$RC_SVCNAME/$RC_SVCNAME.db"
-FBPID="/run/$RC_SVCNAME.pid"
-pidfile="${FBPID}"
-command_background="yes"
-extra_started_commands="resetconf"
-
-checkconfig() {
-    if [ -z "${FBPID}" ] ; then
-	FBPID="/run/filebrowser.pid"
-    fi
-    if [ -z "${FB_ROOT}" ] ; then
-	FB_ROOT="/srv"
-    fi
+command_args="-d ${DATA_DIR}/filebrowser.db -c $CONFIG -r $ROOT"
+pidfile="/run/$RC_SVCNAME/$RC_SVCNAME.pid"
+command_background=true
+depend() {
+        need net
+}
+start_pre() {
+        checkpath --directory --mode 0775 $DATA_DIR $ROOT \
+                /run/$RC_SVCNAME $LOGS_DIR
+        checkpath --file --mode 0775 $CONFIG
 }
 
 start() {
@@ -195,34 +171,6 @@ start() {
     ebegin "Starting ${SVCNAME}"
     start-stop-daemon --start --quiet --exec ${command} --pidfile "${FBPID}" --make-pidfile -- 
     eend $?
-}
-
-stop() {
-    local rv=0
-    ebegin "Stopping ${SVCNAME}"
-    start-stop-daemon --stop --quiet --pidfile "${FBPID}"
-    eend $?
-}
-
-resetconf() {
-    stop
-    checkconfig || return 1
-    ebegin "Reseting/erasing all settings files not implemented. help here"
-}
-
-graceful() {
-    if ! service_started "${SVCNAME}" ; then
-	eerror "${SVCNAME} isn't running"
-	return 1
-    fi
-    checkconfig || return 1
-    ebegin "Gracefully stopping ${SVCNAME}"
-    start-stop-daemon --quiet --pidfile "${FBPID}" \
-	--signal INT
-    if eend $? ; then
-	rm -f "${FBPID}"
-	start
-    fi
 }
 ```
 
