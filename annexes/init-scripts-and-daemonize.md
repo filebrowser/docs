@@ -122,7 +122,7 @@ case "$1" in
   status)
     status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
     ;;
-  restart|force-reload)
+  restart)
     log_daemon_msg "Restarting $DESC" "$NAME"
     do_stop
     case "$?" in
