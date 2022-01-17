@@ -83,10 +83,6 @@ do_start() {
     start-stop-daemon --start --quiet --make-pidfile --pidfile $PIDFILE --exec $DAEMON --name $NAME --background -- $DAEMON_OPTS || return 2
 }
 
-resetconf() {
-    rm -rf $FB_DATABASE
-}
-
 do_stop()
 {
     start-stop-daemon --stop --quiet --remove-pidfile --retry=TERM/30/KILL/5 --pidfile $PIDFILE --name $NAME
