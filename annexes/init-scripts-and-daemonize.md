@@ -175,7 +175,7 @@ The configuration unfortunatelly cannot be managed by using a `/etc/conf.d/fileb
 name=$RC_SVCNAME
 cfgfile="/etc/$RC_SVCNAME/$RC_SVCNAME.conf"
 command="/usr/local/bin/filebrowser"
-command_args="--database /srv/$RC_SVCNAME.db"
+command_args="--database /var/lib/$RC_SVCNAME/$RC_SVCNAME.db"
 FBPID="/run/$RC_SVCNAME.pid"
 pidfile="${FBPID}"
 command_background="yes"
