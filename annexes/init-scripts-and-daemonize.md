@@ -169,7 +169,7 @@ The configuration unfortunatelly cannot be managed by using a `/etc/conf.d/fileb
 
 ```bash
 #!/sbin/openrc-run
-# /usr/local must be adapted to installed binary
+# /usr/local/bin must be adapted to installed binary
 # Author: PICCORO Lenz McKAY <mckaygerhard@gmail.com>
 
 name=$RC_SVCNAME
