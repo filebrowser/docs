@@ -13,7 +13,7 @@ The purpose is to keep the program simple, but here we documented the best way t
 
 ## Bash
 
-Just run the first command and then the second adn logout:
+Just run the first command and then the second and logout:
 
 ``` bash
 FB_ROOT=/var/lib/filebrowser/ FB_DATABASE=$FB_ROOT/filebrowser.db FB_BASEURL=/filebrowser/ FB_PORT=8090 /usr/local/bin/filebrowser &
