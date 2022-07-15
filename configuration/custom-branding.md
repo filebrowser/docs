@@ -14,7 +14,8 @@ filebrowser config set --branding.name "My Name" \
     --branding.files "/abs/path/to/my/dir" \
     --branding.disableExternal
 ```
-Or can be set under 'Branding directory path' in **Settings → Global Settings**.  If using Docker then remember to bind this directory, for example as `/home/username/containers/filebrowser/branding:/branding`
+Or can be set under 'Branding directory path' in **Settings → Global Settings**. 
+{% hint style="info" %} If using Docker then remember to bind this directory, for example as `/home/username/containers/filebrowser/branding:/branding` {% endhint %}
 
 For custom icons to be recognised you need to create `img` and `img/icons` directories and place the svg in the `branding/img` directory:
 ![](https://user-images.githubusercontent.com/13610277/179242249-3d0554ab-508d-4533-8957-f3c38bb02258.png)
