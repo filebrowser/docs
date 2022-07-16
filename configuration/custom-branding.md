@@ -20,4 +20,4 @@ Or can be set under 'Branding directory path' in **Settings → Global Settings*
 For custom icons to be recognised you need to create `img` and `img/icons` directories and place the svg in the `branding/img` directory:
 ![](https://user-images.githubusercontent.com/13610277/179242249-3d0554ab-508d-4533-8957-f3c38bb02258.png)
 
-To replace the favico you need to place this in the `img/icons` directory but also note that some of the other PNG icon types will be required too (see the default logotypes link above) as the browser will normally use the highest resolution option available (at a minimum the 16x16 and 32x32 options).
+To replace the favico you need to place this in the `img/icons` directory but also note that some of the other PNG icon types will be required too (see the default logotypes link above) as the browser will normally use the highest resolution option available (at a minimum the 16x16 and 32x32 options).  You can use the [Real Favicon Generator](https://realfavicongenerator.net/) to generate these for you from your base image.
