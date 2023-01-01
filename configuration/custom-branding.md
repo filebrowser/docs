@@ -20,4 +20,6 @@ Or can be set under 'Branding directory path' in **Settings → Global Settings*
 For custom icons to be recognised you need to create `img` and `img/icons` directories and place the svg in the `branding/img` directory:
 ![filebrowser customisation tree](</.gitbook/assets/filebrowser_customisation_tree.png>)
 
-To replace the favicon you need to place this in the `img/icons` directory but also note that some of the other PNG icon types will be required too (see the default logotypes link above) as the browser will normally use the highest resolution option available (at a minimum the 16x16 and 32x32 options).  You can use the [Real Favicon Generator](https://realfavicongenerator.net/) to generate these for you from your base image.
+To replace the favicon you need to place this in the `img/icons` directory but also note that some of the other PNG icon types will be required too (see the default logotypes link above) as the browser will normally use the highest resolution option available (at a minimum the 16x16 and 32x32 options).  You can use the [Real Favicon Generator](https://realfavicongenerator.net/) to generate these for you from your base image.  
+
+The icons are cached, to make the new ones appear more quickly open developer tools in your browser, then click on the Application tab, then Storage and then 'Clear Site Data'.
