@@ -73,3 +73,17 @@ docker run \
 {% endtabs %}
 
 By default, we already have a [configuration file with some defaults](https://github.com/filebrowser/filebrowser/blob/master/docker/root/defaults/settings.json) so you can just mount the root and the database. Although you can overwrite by mounting a directory with a new config file. If you don't already have a database file, make sure to create a new empty file under the path you specified. Otherwise, Docker will create an empty folder instead of an empty file, resulting in an error when mounting the database into the container.
+
+## Install on Easypanel
+
+Easypanel is a modern server control panel. If you [run Easypanel](https://easypanel.io/docs) on your server, you can deploy n8n with 1 click on it.
+
+[![Deploy to Easypanel](https://easypanel.io/img/deploy-on-easypanel-40.svg)](https://easypanel.io/docs/templates/n8n){:target="_blank"}
+
+## Instructions
+
+1. Create a VM that runs Ubuntu on your cloud provider.
+2. Install Easypanel using the instructions from the website.
+3. Create a new project.
+4. Install n8n using the dedicated template.
+
