@@ -47,7 +47,7 @@ filebrowser [flags]
 | key | k | tls key |
 | log | l | log output |
 | noauth |  | use the noauth auther when using quick setup |
-| password |  | hashed password for the first user when using quick config \(default "admin"\) |
+| password |  | hashed password \(bcrypt\) for the first user when using quick config \(default "admin"\) |
 | port | p | port to listen on |
 | root | r | root to prepend to relative paths |
 | username |  | username for the first user when using quick config |
