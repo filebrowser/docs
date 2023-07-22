@@ -57,3 +57,8 @@ To build File Browser is just like any other Go program:
 go build
 ```
 
+To create a development build use the "dev" tag, this way the content inside the frontend folder will not be embedded in the binary but will be reloaded at every change:
+
+```bash
+go build -tags dev
+```
