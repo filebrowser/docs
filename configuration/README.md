@@ -8,3 +8,4 @@ Most of the configuration can be understood through our Command Line Interface d
 
 {% page-ref page="command-runner.md" %}
 
+{% page-ref page="shell-commands.md" %}
