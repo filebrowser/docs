@@ -50,7 +50,7 @@ File Browser is also available as a Docker image. You can find it on [Docker Hub
 ```shell
 docker run \
     -v /path/to/root:/srv \
-    -v /path/filebrowser.db:/database.db \
+    -v /path/filebrowser.db:/database/filebrowser.db \
     -v /path/.filebrowser.json:/.filebrowser.json \
     -u $(id -u):$(id -g) \
     -p 8080:80 \
