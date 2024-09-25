@@ -37,7 +37,7 @@ npm run build
 This will install the dependencies and build the frontend so you can then embed it into the Go app. Although, if you want to play with it, you'll get bored of building it after every change you do. So, you can run the command below to watch for changes:
 
 ```bash
-npm run watch
+npm run dev
 ```
 
 ### Backend
