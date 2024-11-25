@@ -70,6 +70,28 @@ docker run \
     filebrowser/filebrowser:s6
 ```
 {% endtab %}
+
+{% tab title="docker-compose.yaml" %}
+```yaml
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:s6
+    container_name: filebrowser
+    restart: unless-stopped
+    volumes:
+      - /path/to/root:/srv
+      - ./filebrowser:/database/
+      - ./filebrowser:/config/
+    environment:
+      - PUID=1000
+      - PGID=1000
+```
+{% endtab %}
+
 {% endtabs %}
 
 By default, we already have a [configuration file with some defaults](https://github.com/filebrowser/filebrowser/blob/master/docker/root/defaults/settings.json) so you can just mount the root and the database. Although you can overwrite by mounting a directory with a new config file. If you don't already have a database file, make sure to create a new empty file under the path you specified. Otherwise, Docker will create an empty folder instead of an empty file, resulting in an error when mounting the database into the container.
+
+**Need to mount more than 1 volume**? 
+ - Simply add another volume mount as a subdirectory in `/srv`
+ - For example: `-v /path/to/root:/srv` above now becomes `-v /path/to/root:/srv/root` and a new volume will be `-v /path/to/data:/srv/data`. Filebrowser will automatically display both of these folders on the home page.
