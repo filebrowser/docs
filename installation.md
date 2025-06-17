@@ -30,10 +30,7 @@ filebrowser -r /path/to/your/files
 {% endtab %}
 {% endtabs %}
 
-Done! It will bootstrap a database in which all the configurations and users are stored. Now, you can see on your command line the address in which your instance is running. You just need to go to that URL and use the following credentials:
-
-* Username: `admin`
-* Password: `admin`
+Done! It will bootstrap a database in which all the configurations and users are stored. Now, you can see on your command line the address in which your instance is running, and a randomly generated password. You just need to go to that URL and use the username `admin` with that password. 
 
 {% hint style="danger" %}
 You must change the password and, if you can, the username for the best security possible.
